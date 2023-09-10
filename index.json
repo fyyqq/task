@@ -1,0 +1,10 @@
+{
+    "nama": "John Doe",
+    "umur": 30,
+    "alamat": {
+        "jalan": "123 Main Street",
+        "kota": "Contoh Kota",
+        "kodePos": "12345"
+    }
+}
+  
