@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <style>
+            body {
+                padding: 80px 0px;
+            }
+            /* Portfolio Section */
+            .slider .slider-item {
+                margin-right: 20px;
+            }
+            .slider .slider-item div {
+                height: 200px;
+                width: 100%;
+                overflow: hidden;
+                border-radius: 25px;
+                cursor: pointer;
+            }
+            .slider .slider-item div img {
+                object-fit: cover;
+            }
+            .slider .slider-item div .action-portfolio {
+                bottom: -500px;
+                left: 0%;
+                height: 0%;
+                width: 100%;
+                backdrop-filter: blur(2px);
+            }
+            .slider .slider-item div:hover .action-portfolio {
+                bottom: 0px;
+                height: 100%;
+                transition: height .3s ease-in-out;
+            }
+            .slick-dots {
+                transform: translateY(20px);
+                text-align: center;
+            }
+            .slick-dots li {
+                display: inline-block;
+                position: relative;
+                margin: 0 5px;
+            }
+            .slick-dots li button:before {
+                color: white !important;
+            }
+            .slick-dots li.slick-active button:before {
+                transform: translateY(.5px);
+                font-size: 10px;
+                color: red !important;
+            }
+            /* Landing Page */
+            #section1 {
+                margin-top: 150px;
+                margin-bottom: 100px;
+            }
+            #section1 {
+                height: max-content;
+                background-color: #fff;
+                overflow: hidden;
+            }
+            #section1 .row #img_section {
+                width: 550px;
+                overflow: hidden;
+            }
+            #section1 .row div #text_section {
+                width: 80%;
+            }
+            #section1 .row div #text_section h1, 
+            #section1 .row div #text_section p {
+                transform: translateX(550px);
+                opacity: .5;
+            }
+            #section1 .row div #text_section .btn {
+                transform: translateY(150px);
+            }
+            #section1.active .row div #text_section .btn {
+                transform: translateY(0px);
+                transition: all .7s ease-in-out;
+            }
+            #section1.active .row div #text_section h1 {
+                transform: translateX(0px);
+                opacity: 1;
+                transition: all .7s ease-in-out;
+            }
+            #section1.active .row div #text_section p {
+                transform: translateX(0px);
+                opacity: 1;
+                transition: all .8s ease-in-out;
+            }
+            /* Portfolio Page */
+            #section2 {
+                height: max-content;
+                padding: 120px 0;
+                background: rgb(59,2,2);
+                background: linear-gradient(0deg, rgba(59,2,2,1) 0%, rgba(255,0,0,1) 100%);
+            }
+            #section2 .row div #text_section h1, 
+            #section2 .row div #text_section p {
+                transform: translateY(180px);
+                opacity: .5;
+            }
+            #section2 .row div #text_section .btn {
+                transform: translateY(150px);
+            }
+            #section2 .row div #text_section h1, 
+            #section2 .row div #text_section p {
+                transform: translateY(180px);
+                opacity: .5;
+            }
+            #section2 .row div #text_section .btn {
+                transform: translateY(150px);
+            }
+            #section2.active .row div #text_section .btn {
+                transform: translateY(0px);
+                transition: all .65s ease-in-out;
+            }
+            #section2.active .row div #text_section h1 {
+                transform: translateY(0px);
+                opacity: 1;
+                transition: all .5s ease-in-out;
+            }
+            #section2.active .row div #text_section p {
+                transform: translateY(0px);
+                opacity: 1;
+                transition: all .6s ease-in-out;
+            }
+            @media screen and (max-width: 991px) {
+                /* Portfolio Page */
+                #section1 .row div #text_section {
+                    width: 100%;
+                }
+            }
+            @media screen and (max-width: 480px) {
+                /* Portfolio Section */
+                .slider div {
+                    margin-right: 0px;
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-dark">
+        <div class="container-sm">
+            <h1 class="text-light text-center fst-italic" style="margin-bottom: 100px;">My Task</h1>
+            <div class="slider">
+               <div class="slider-item">
+                   <div class="border border-4 border-secondary position-relative">
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkRtAbEz0rZUdHj1ZOxEpn44Ykm8iLzQAgWQ&usqp=CAU" class="w-100 h-100">
+                       <a href="#company_link" class="text-decoration-none d-flex align-items-center justify-content-center flex-column-reverse position-absolute action-portfolio">
+                            <p class="mb-0 text-light fw-bold text-center">Lorem ipsum dolor sit amet consectetur</p>
+                            <i class="mdi mdi-open-in-new text-light fs-3"></i>
+                       </a>
+                   </div>
+               </div>
+               <div class="slider-item">
+                   <div class="border border-4 border-secondary position-relative">
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkRtAbEz0rZUdHj1ZOxEpn44Ykm8iLzQAgWQ&usqp=CAU" class="w-100 h-100">
+                       <a href="#company_link" class="text-decoration-none d-flex align-items-center justify-content-center flex-column-reverse position-absolute action-portfolio">
+                            <p class="mb-0 text-light fw-bold text-center">Lorem ipsum dolor sit amet consectetur</p>
+                            <i class="mdi mdi-open-in-new text-light fs-3"></i>
+                       </a>
+                   </div>
+               </div>
+               <div class="slider-item">
+                   <div class="border border-4 border-secondary position-relative">
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkRtAbEz0rZUdHj1ZOxEpn44Ykm8iLzQAgWQ&usqp=CAU" class="w-100 h-100">
+                       <a href="#company_link" class="text-decoration-none d-flex align-items-center justify-content-center flex-column-reverse position-absolute action-portfolio">
+                            <p class="mb-0 text-light fw-bold text-center">Lorem ipsum dolor sit amet consectetur</p>
+                            <i class="mdi mdi-open-in-new text-light fs-3"></i>
+                       </a>
+                   </div>
+               </div>
+               <div class="slider-item">
+                   <div class="border border-4 border-secondary position-relative">
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkRtAbEz0rZUdHj1ZOxEpn44Ykm8iLzQAgWQ&usqp=CAU" class="w-100 h-100">
+                       <a href="#company_link" class="text-decoration-none d-flex align-items-center justify-content-center flex-column-reverse position-absolute action-portfolio">
+                            <p class="mb-0 text-light fw-bold text-center">Lorem ipsum dolor sit amet consectetur</p>
+                            <i class="mdi mdi-open-in-new text-light fs-3"></i>
+                       </a>
+                   </div>
+               </div>
+               <div class="slider-item">
+                   <div class="border border-4 border-secondary position-relative">
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkRtAbEz0rZUdHj1ZOxEpn44Ykm8iLzQAgWQ&usqp=CAU" class="w-100 h-100">
+                       <a href="#company_link" class="text-decoration-none d-flex align-items-center justify-content-center flex-column-reverse position-absolute action-portfolio">
+                            <p class="mb-0 text-light fw-bold text-center">Lorem ipsum dolor sit amet consectetur</p>
+                            <i class="mdi mdi-open-in-new text-light fs-3"></i>
+                       </a>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div id="section1" class="container-fluid px-0 py-4">
+            <div class="row mx-0">
+                <div class="col-lg-5 col-12 d-flex align-items-center justify-content-center">
+                    <div id="img_section">
+                        <img src="images/recruit_1.png" class="w-100 h-100" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12 pt-3 d-flex pb-lg-0 pb-4 align-items-start justify-content-center flex-column px-lg-5 px-3">
+                    <div id="text_section" class="d-flex align-items-start justify-content-center flex-column">
+                        <h1 class="text-dark text-lg-start text-center">Turning Ambitions into Achievements with <span class="text-danger">WIKI</span>CAREER recruitment</h1>
+                        <p class="mb-0 text-dark text-lg-start text-center px-lg-0 px-4 w-100">Turning Dreams into Reality. We Help You Find a Job You Love.</p>
+                        <div class="mt-4 d-flex align-items-center justify-content-lg-start justify-content-center w-100">
+                            <a href="#intouch" class="btn btn-md btn-danger rounded-pill px-4 fw-bold text-uppercase">Get In Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section2" class="container-fluid px-0">
+            <div class="row mx-0 d-flex align-items-center justify-content-center h-100">
+                <div class="col-lg-8 col-12">
+                    <div class="w-100 h-100 d-flex align-items-center justify-content-center flex-column px-lg-5 px-3">
+                        <div id="text_section" class="d-flex align-items-center justify-content-center flex-column">
+                            <h1 class="text-light text-center">Collaborate for Shared Success</h1>
+                            <p class="mb-0 text-light text-center">We see ourselves as your partner in the search for talent. Together, we will achieve great excellence and performance</p>
+                            <div class="mt-4 text-center">
+                                <a href="#contact" class="btn btn-md btn-light rounded-pill px-4 text-danger fw-bold text-uppercase">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script>
+            // Slider
+            $(document).ready(function() {
+
+                const slider = $('.slider');
+
+                $(slider).slick({
+                    dots: true,
+                    arrows: false,
+                    autoplay: true,
+                    infinite: true,
+                    autoplaySpeed: 1500,
+                    speed: 300,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 3,
+                                infinite: true,
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                dots: false
+                            }
+                        }
+                    ]
+                });
+                slider.on('mouseenter', function() {
+                    slider.slick('slickPause');
+                });
+                slider.on('mouseleave', function() {
+                    slider.slick('slickPlay');
+                });
+            });
+
+            const section1 = document.getElementById('section1');
+            const section2 = document.getElementById('section2');
+
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                if (scrollY > 120) {
+                    section1.classList.add('active');
+                }
+                if (scrollY > 470) {
+                    section2.classList.add('active');
+                }
+            });
+        </script>
+    </body>
+</html>
