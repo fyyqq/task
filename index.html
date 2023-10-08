@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css">
+        <script src="https://kit.fontawesome.com/5e539df1ae.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <style>
@@ -53,90 +54,185 @@
                 color: white !important;
             }
             .slick-dots li.slick-active button:before {
-                transform: translateY(.5px);
+                transform: translateY(1px);
                 font-size: 10px;
                 color: red !important;
             }
             /* Landing Page */
-            #section1 {
+            #section1, #section2, #section3 {
                 margin-top: 150px;
                 margin-bottom: 100px;
             }
-            #section1 {
+            #section1, #section2 {
                 height: max-content;
                 background-color: #fff;
+                background-color: #FCFCF8;
                 overflow: hidden;
             }
-            #section1 .row #img_section {
+            #section1 .row #img_section,
+            #section2 .row #img_section {
                 width: 550px;
                 overflow: hidden;
             }
-            #section1 .row div #text_section {
+            #section1 .row div #text_section,
+            #section2 .row div #text_section {
                 width: 80%;
             }
             #section1 .row div #text_section h1, 
-            #section1 .row div #text_section p {
+            #section1 .row div #text_section p,
+            #section2 .row div #text_section h1, 
+            #section2 .row div #text_section p {
                 transform: translateX(550px);
-                opacity: .5;
+                opacity: 0;
             }
-            #section1 .row div #text_section .btn {
+            #section1 .row div #text_section .btn,
+            #section2 .row div #text_section .btn {
                 transform: translateY(150px);
+                opacity: 0;
             }
-            #section1.active .row div #text_section .btn {
+            #section1.active .row div #text_section .btn,
+            #section2.active .row div #text_section .btn {
                 transform: translateY(0px);
+                opacity: 1;
                 transition: all .7s ease-in-out;
             }
-            #section1.active .row div #text_section h1 {
+            #section1.active .row div #text_section h1,
+            #section2.active .row div #text_section h1 {
                 transform: translateX(0px);
                 opacity: 1;
                 transition: all .7s ease-in-out;
             }
-            #section1.active .row div #text_section p {
+            #section1.active .row div #text_section p,
+            #section2.active .row div #text_section p {
                 transform: translateX(0px);
                 opacity: 1;
                 transition: all .8s ease-in-out;
             }
+            /* Line */
+            #line span {
+                height: 250px;
+                width: 2.5px;
+                background: rgb(255,0,0);
+                background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 100%);
+            }
             /* Portfolio Page */
-            #section2 {
+            #section3 {
                 height: max-content;
                 padding: 120px 0;
                 background: rgb(59,2,2);
                 background: linear-gradient(0deg, rgba(59,2,2,1) 0%, rgba(255,0,0,1) 100%);
             }
-            #section2 .row div #text_section h1, 
-            #section2 .row div #text_section p {
+            #section3 .row div #text_section h1, 
+            #section3 .row div #text_section p {
                 transform: translateY(180px);
-                opacity: .5;
+                opacity: 0;
             }
-            #section2 .row div #text_section .btn {
+            #section3 .row div #text_section .btn {
                 transform: translateY(150px);
             }
-            #section2 .row div #text_section h1, 
-            #section2 .row div #text_section p {
+            #section3 .row div #text_section h1, 
+            #section3 .row div #text_section p {
                 transform: translateY(180px);
-                opacity: .5;
+                opacity: 0;
             }
-            #section2 .row div #text_section .btn {
+            #section3 .row div #text_section .btn {
                 transform: translateY(150px);
             }
-            #section2.active .row div #text_section .btn {
+            #section3.active .row div #text_section .btn {
                 transform: translateY(0px);
                 transition: all .65s ease-in-out;
             }
-            #section2.active .row div #text_section h1 {
+            #section3.active .row div #text_section h1 {
                 transform: translateY(0px);
                 opacity: 1;
                 transition: all .5s ease-in-out;
             }
-            #section2.active .row div #text_section p {
+            #section3.active .row div #text_section p {
                 transform: translateY(0px);
                 opacity: 1;
                 transition: all .6s ease-in-out;
+            }
+            /* Loader */
+            #loader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: #212121;
+                z-index: 999;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 1;
+            }
+            #loader.active {
+                opacity: 0;
+                display: none;
+                transition: all 1s ease-in-out;
+            }
+            #loader #logo {
+                /* width: 300px; */
+                overflow: hidden;
+                position: absolute;
+                top: 55px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .custom-loader {
+                width: 120px;
+                height: 120px;
+                display: grid;
+                animation: color 1s infinite linear;
+            }
+            @keyframes color {
+                0% {
+                    color: white;
+                }
+                50% {
+                    color: rgb(221, 105, 105);
+                }
+                100% {
+                    color: rgb(245, 19, 19);
+                }
+            }
+            .custom-loader:before,
+            .custom-loader:after {
+                content: "";
+                grid-area: 1/1;
+                --c1:linear-gradient(90deg,#0000 calc(100%/3),currentColor 0 calc(2*100%/3),#0000 0);
+                --c2:linear-gradient( 0deg,#0000 calc(100%/3),currentColor 0 calc(2*100%/3),#0000 0);
+                background:
+                    var(--c1),
+                    var(--c2),
+                    var(--c1),
+                    var(--c2);
+                background-size:300% 4px,4px 300%;
+                background-repeat: no-repeat;
+                animation: l1 1s infinite linear;
+            }
+            .custom-loader:after {
+                margin: 10px;
+                transform: scaleX(-1);
+                animation-delay: -.25s;
+            }
+            @keyframes l1 {
+                0%   {background-position: 50%  0,100% 100%,0    100%,0 0}
+                25%  {background-position: 0    0,100% 50% ,0    100%,0 0}
+                50%  {background-position: 0    0,100% 0   ,50%  100%,0 0}
+                75%  {background-position: 0    0,100% 0   ,100% 100%,0 50%}
+                75.01%{background-position: 100% 0,100% 0   ,100% 100%,0 50%}
+                100% {background-position: 50%  0,100% 0   ,100% 100%,0 100%}
             }
             @media screen and (max-width: 991px) {
                 /* Portfolio Page */
                 #section1 .row div #text_section {
                     width: 100%;
+                }
+                /* Slider */
+                .custom-loader {
+                    width: 100px;
+                    height: 100px;
                 }
             }
             @media screen and (max-width: 480px) {
@@ -144,11 +240,27 @@
                 .slider div {
                     margin-right: 0px;
                 }
+                /* Slider */
+                .custom-loader {
+                    width: 80px;
+                    height: 80px;
+                }
             }
         </style>
     </head>
     <body class="bg-dark">
-        <div class="container-sm">
+        <div id="loader">
+            <div id="logo">
+                <h1 class="text-light" style="letter-spacing: 2px;">WIKI<span style="color: red;">CAREER</span></h1>
+                <!-- <img src="https://wikicareer.com.my/general/img/wc_black.png" class="w-100 h-100" style="object-fit: cover;"> -->
+            </div>
+            <div class="d-flex align-items-center justify-content-center flex-column gap-5" id="loader_section">
+                <div class="custom-loader"></div>
+                <h1 class="mb-0 text-light h4 fw-normal" style="letter-spacing: 1px;">Loading...</h1>
+            </div>
+        </div>
+        <div class="container-fluid px-0"></div>
+        <div class="container-lg">
             <h1 class="text-light text-center fst-italic" style="margin-bottom: 100px;">My Task</h1>
             <div class="slider">
                <div class="slider-item">
@@ -216,7 +328,31 @@
                 </div>
             </div>
         </div>
-        <div id="section2" class="container-fluid px-0">
+        <div class="w-100 d-flex align-items-center justify-content-center" id="line">
+            <span class="rounded-pill"></span>
+        </div>
+        <div id="section2" class="container-fluid px-0 py-4">
+            <div class="row mx-0">
+                <div class="col-lg-7 col-12 pt-3 d-flex pb-lg-0 pb-4 align-items-start justify-content-center flex-column px-lg-5 px-3">
+                    <div id="text_section" class="d-flex align-items-start justify-content-center flex-column">
+                        <h1 class="text-dark text-lg-start text-center">Turning Ambitions into Achievements with <span class="text-danger">WIKI</span>CAREER recruitment</h1>
+                        <p class="mb-0 text-dark text-lg-start text-center px-lg-0 px-4 w-100">Turning Dreams into Reality. We Help You Find a Job You Love.</p>
+                        <div class="mt-4 d-flex align-items-center justify-content-lg-start justify-content-center w-100">
+                            <a href="#intouch" class="btn btn-md btn-danger rounded-pill px-4 fw-bold text-uppercase">Get In Touch</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-12 d-flex align-items-center justify-content-center">
+                    <div id="img_section">
+                        <img src="giphy/were_hiring_2.gif" class="w-100 h-100" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 d-flex align-items-center justify-content-center" id="line">
+            <span class="rounded-pill"></span>
+        </div>
+        <div id="section3" class="container-fluid px-0">
             <div class="row mx-0 d-flex align-items-center justify-content-center h-100">
                 <div class="col-lg-8 col-12">
                     <div class="w-100 h-100 d-flex align-items-center justify-content-center flex-column px-lg-5 px-3">
@@ -224,7 +360,7 @@
                             <h1 class="text-light text-center">Collaborate for Shared Success</h1>
                             <p class="mb-0 text-light text-center">We see ourselves as your partner in the search for talent. Together, we will achieve great excellence and performance</p>
                             <div class="mt-4 text-center">
-                                <a href="#contact" class="btn btn-md btn-light rounded-pill px-4 text-danger fw-bold text-uppercase">Contact Us</a>
+                                <a href="#contact" class="btn btn-md btn-light rounded-pill px-3 text-danger fw-bold text-uppercase">Contact Us <i class="ps-2 fa-solid fa-phone-flip"></i></a>
                             </div>
                         </div>
                     </div>
@@ -265,7 +401,7 @@
                             }
                         },
                         {
-                            breakpoint: 480,
+                            breakpoint: 500,
                             settings: {
                                 slidesToShow: 1,
                                 slidesToScroll: 1,
@@ -283,16 +419,23 @@
             });
 
             const section1 = document.getElementById('section1');
-            const section2 = document.getElementById('section2');
+            const section3 = document.getElementById('section3');
 
             window.addEventListener('scroll', () => {
                 const scrollY = window.scrollY;
                 if (scrollY > 120) {
                     section1.classList.add('active');
                 }
-                if (scrollY > 470) {
-                    section2.classList.add('active');
+                if (scrollY > 650) {
+                    section3.classList.add('active');
                 }
+            });
+
+            window.addEventListener("DOMContentLoaded", () => {
+                setTimeout(() => {
+                    const loader = document.getElementById('loader');
+                    loader.classList.add('active');
+                }, 500);
             });
         </script>
     </body>
