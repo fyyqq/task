@@ -12,6 +12,11 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <style>
+            :root {
+                --clear: black;
+                --none: none;
+                --unset: unset;
+            }
             body {
                 padding: 80px 0px;
             }
@@ -224,6 +229,13 @@
                 75.01%{background-position: 100% 0,100% 0   ,100% 100%,0 50%}
                 100% {background-position: 50%  0,100% 0   ,100% 100%,0 100%}
             }
+            #section4 .accordion {
+                --bs-accordion-border-color: var(--clear);
+                --bs-accordion-border: var(--unset);
+            }
+            #section4 .accordion .accordion-button::after {
+                color: white;
+            }
             @media screen and (max-width: 991px) {
                 /* Portfolio Page */
                 #section1 .row div #text_section {
@@ -367,6 +379,62 @@
                 </div>
             </div>
         </div>
+        <div id="section4" class="container-fluid px-0">
+            <div class="d-flex align-items-center justify-content-center flex-column gap-5">
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                    <h1 class="text-light h3">General Questions about Our Services</h1>
+                    <p class="mb-0 text-light">let's recognize what we do</p>
+                </div>
+                <div class="col-lg-5 col-md-10 col-11 mt-4">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <div class="position-relative p-0 m-0">
+                                    <button style="font-size: 17px; color: #dddddd;" class="py-3 w-100 text-start px-4 bg-dark shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What sets your recruitment company apart from others?</button>
+                                    <i class="mdi mdi-plus text-light fs-5 position-absolute" style="top: 50%; right: 20px; transform: translateY(-50%);"></i>
+                                </div>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div style="font-size: 15px; color: #BFBFBF;" class="accordion-body bg-dark"><strong>Answer: </strong> At WIKICAREER Recruitment, our differentiating factor lies in our seasoned team of experts who bring a wealth of industry-specific knowledge and a vast network of connections to the table. We are committed to understanding the unique needs of our clients and finding the perfect talent match for their organizations. Our dedication to personalized service, combined with our industry insight, makes us stand out in the competitive world of recruitment.</div>
+                            </div>
+                        </div>                         
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <div class="position-relative">
+                                    <button style="font-size: 17px; color: #dddddd;" class="py-3 w-100 text-start px-4 bg-dark shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How does your recruitment process work?</button>
+                                    <i class="mdi mdi-plus text-light fs-5 position-absolute" style="top: 50%; right: 20px; transform: translateY(-50%);"></i>
+                                </div>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div style="font-size: 15px; color: #BFBFBF;" class="accordion-body bg-dark"><strong>Answer: </strong> WIKICAREER Recruitment employs a comprehensive and meticulous recruitment process. We begin by conducting in-depth interviews with potential candidates to assess their qualifications, skills, and cultural fit. Our team also conducts thorough reference checks to ensure that we present only the most qualified and reliable candidates to our clients. We believe in transparency and open communication throughout the recruitment journey, and we work closely with our clients to ensure their specific needs are met. Our goal is to deliver top-tier talent that aligns perfectly with our clients' requirements and organizational culture.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <div class="position-relative">
+                                    <button style="font-size: 17px; color: #dddddd;" class="py-3 w-100 text-start px-4 bg-dark shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Does your recruitment company deal with different types of jobs?</button>
+                                    <i class="mdi mdi-plus text-light fs-5 position-absolute" style="top: 50%; right: 20px; transform: translateY(-50%);"></i>
+                                </div>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div style="font-size: 15px; color: #BFBFBF;" class="accordion-body bg-dark"><strong>Answer: </strong>  Absolutely, at WIKICAREER Recruitment, we pride ourselves on our versatility and ability to cater to a wide range of job positions. Whether you're seeking executive-level candidates or entry-level staff, whether it's within the IT sector, healthcare, finance, or any other industry, we have the expertise and experience to deliver outstanding results. Our extensive network allows us to tap into diverse talent pools, ensuring that we can meet the unique staffing needs of various sectors</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <div class="position-relative">
+                                    <button style="font-size: 17px; color: #dddddd;" class="py-3 w-100 text-start px-4 bg-dark shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How long does it take to find a suitable candidate?</button>
+                                    <i class="mdi mdi-plus text-light fs-5 position-absolute" style="top: 50%; right: 20px; transform: translateY(-50%);"></i>
+                                </div>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div style="font-size: 15px; color: #BFBFBF;" class="accordion-body bg-dark"><strong>Answer: </strong> The timeline for finding the perfect candidate varies depending on the complexity and specificity of the position. However, at WIKICAREER Recruitment, we are committed to a swift and efficient recruitment process. We understand that time is of the essence for our clients, and we work diligently to present high-quality candidates within a reasonable timeframe. Our priority is not just to fill a position quickly but to ensure that the candidate we recommend is an ideal fit for the role and the organization's long-term success.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         <script>
             // Slider
@@ -426,7 +494,7 @@
                 if (scrollY > 120) {
                     section1.classList.add('active');
                 }
-                if (scrollY > 650) {
+                if (scrollY > 1650) {
                     section3.classList.add('active');
                 }
             });
@@ -435,7 +503,7 @@
                 setTimeout(() => {
                     const loader = document.getElementById('loader');
                     loader.classList.add('active');
-                }, 500);
+                }, 100);
             });
         </script>
     </body>
